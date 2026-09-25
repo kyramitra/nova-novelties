@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Nova Novelties is a space-themed multi-cuisine restaurant by Kyra Mitra, serving cosmic drinks, British comfort food, and Asian favorites."
+    >
+    <title>Nova Novelties | Space-Themed Restaurant</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/nova-hero.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Nova Novelties home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Nova Novelties</strong>
+          <small>Multi-cuisine restaurant</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-site-nav>
+        <a href="#menu">Menu</a>
+        <a href="#order">Order</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#reserve">Reserve</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/nova-hero.png" alt="A space-themed restaurant dining room with colorful food and drinks under a starry sky.">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Now orbiting Orlando</p>
+          <h1 id="hero-title">Nova Novelties</h1>
+          <p class="hero-copy">
+            A playful space-themed restaurant serving bright lattes, British comfort plates,
+            and Asian favorites from one glowing galactic kitchen.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#order">Order Online</a>
+            <a class="button button-secondary" href="#reserve">Reserve a Table</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Restaurant quick details">
+          <p class="status"><span></span> Open today 11 AM - 10 PM</p>
+          <dl>
+            <div>
+              <dt>All dishes</dt>
+              <dd>$8</dd>
+            </div>
+            <div>
+              <dt>Desserts</dt>
+              <dd>$7</dd>
+            </div>
+            <div>
+              <dt>Call</dt>
+              <dd><a href="tel:+19549876543">(954) 987-6543</a></dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="feature-strip" aria-label="Featured items">
+        <article>
+          <span class="mini-planet"></span>
+          <h2>Astra Latte</h2>
+          <p>Fresh coffee, warm milk, and a small crown of cold foam.</p>
+        </article>
+        <article>
+          <span class="mini-planet mini-planet-coral"></span>
+          <h2>Fish and Chips</h2>
+          <p>Crisp white fish with thick-cut chips and cozy rainy-day crunch.</p>
+        </article>
+        <article>
+          <span class="mini-planet mini-planet-teal"></span>
+          <h2>Pav Bhaji</h2>
+          <p>Buttery pav with a sizzling spiced vegetable bhaji.</p>
+        </article>
+      </section>
+
+      <section class="intro section-pad" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow">About the restaurant</p>
+          <h2 id="intro-title">Global comfort food with a cosmic point of view.</h2>
+        </div>
+        <p>
+          Nova Novelties is Kyra Mitra's imagined restaurant where the menu travels from
+          creamy masala tea to Sunday roast, sushi, biryani, and mango sticky rice. The
+          food is familiar, the setting is starry, and every table gets a little sparkle.
+        </p>
+      </section>
+
+      <section class="menu-shell section-pad" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <p class="eyebrow">Menu</p>
+          <h2 id="menu-title">Choose your orbit.</h2>
+          <p>Filter the menu or build an online order. All entree and appetizer dishes are $8 unless noted.</p>
+        </div>
+
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab is-active" type="button" data-filter="all">All</button>
+          <button class="tab" type="button" data-filter="drinks">Drinks</button>
+          <button class="tab" type="button" data-filter="british">British</button>
+          <button class="tab" type="button" data-filter="asian">Asian</button>
+          <button class="tab" type="button" data-filter="desserts">Desserts</button>
+        </div>
+
+        <div class="menu-layout">
+          <div class="menu-grid" data-menu-grid>
+            <article class="menu-card" data-category="drinks" id="drinks">
+              <div>
+                <p class="menu-kicker">Signature drink</p>
+                <h3>The Astra Latte</h3>
+                <p>Freshly brewed coffee and warm milk finished with a tiny layer of cold foam.</p>
+              </div>
+              <footer>
+                <strong>$5.99</strong>
+                <button type="button" data-add="The Astra Latte" data-price="5.99">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="drinks">
+              <div>
+                <p class="menu-kicker">Tea</p>
+                <h3>Moon Dust Tea</h3>
+                <p>Masala tea with cardamom, fennel, cloves, milk, sugar, and soft cold foam.</p>
+              </div>
+              <footer>
+                <strong>$6.56</strong>
+                <button type="button" data-add="Moon Dust Tea" data-price="6.56">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="drinks">
+              <div>
+                <p class="menu-kicker">Golden latte</p>
+                <h3>The Lumen Latte</h3>
+                <p>Warm milk, creamy espresso, turmeric, and honey with a bright morning spark.</p>
+              </div>
+              <footer>
+                <strong>$8.87</strong>
+                <button type="button" data-add="The Lumen Latte" data-price="8.87">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="drinks">
+              <div>
+                <p class="menu-kicker">Matcha</p>
+                <h3>Double Berry Twist Matcha</h3>
+                <p>Earthy matcha layered with two sweet berry flavors for a pink, green, and red swirl.</p>
+              </div>
+              <footer>
+                <strong>$9.86</strong>
+                <button type="button" data-add="Double Berry Twist Matcha" data-price="9.86">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="drinks">
+              <div>
+                <p class="menu-kicker">Boba</p>
+                <h3>Sunset Sweet Boba</h3>
+                <p>Fruity layers with popping boba pearls inspired by a glowing backyard sunset.</p>
+              </div>
+              <footer>
+                <strong>$4.86</strong>
+                <button type="button" data-add="Sunset Sweet Boba" data-price="4.86">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="british">
+              <div>
+                <p class="menu-kicker">British main</p>
+                <h3>Fish and Chips</h3>
+                <p>Crispy deep-fried white fish served with thick-cut chips.</p>
+              </div>
+              <footer>
+                <strong>$8</strong>
+                <button type="button" data-add="Fish and Chips" data-price="8">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="british">
+              <div>
+                <p class="menu-kicker">British main</p>
+                <h3>Sunday Roast</h3>
+                <p>Roasted meat, potatoes, and savory sides inspired by a traditional Sunday table.</p>
+              </div>
+              <footer>
+                <strong>$8</strong>
+                <button type="button" data-add="Sunday Roast" data-price="8">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="british">
+              <div>
+                <p class="menu-kicker">Appetizer</p>
+                <h3>Scotch Egg</h3>
+                <p>Boiled egg wrapped in seasoned sausage, crumbed, and fried until golden.</p>
+              </div>
+              <footer>
+                <strong>$8</strong>
+                <button type="button" data-add="Scotch Egg" data-price="8">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="asian">
+              <div>
+                <p class="menu-kicker">Indian favorite</p>
+                <h3>Pav Bhaji</h3>
+                <p>Buttery pav served with hot, spiced vegetables and bright street-food flavor.</p>
+              </div>
+              <footer>
+                <strong>$8</strong>
+                <button type="button" data-add="Pav Bhaji" data-price="8">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="asian">
+              <div>
+                <p class="menu-kicker">Rice bowl</p>
+                <h3>Biryani</h3>
+                <p>Fragrant basmati rice layered with spices, vegetables, and deep masala flavor.</p>
+              </div>
+              <footer>
+                <strong>$8</strong>
+                <button type="button" data-add="Biryani" data-price="8">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="asian">
+              <div>
+                <p class="menu-kicker">Indian classic</p>
+                <h3>Butter Chicken</h3>
+                <p>Tender chicken in a rich, velvety, mildly sweet tomato-and-butter gravy.</p>
+              </div>
+              <footer>
+                <strong>$8</strong>
+                <button type="button" data-add="Butter Chicken" data-price="8">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="asian">
+              <div>
+                <p class="menu-kicker">Japanese rolls</p>
+                <h3>Sushi</h3>
+                <p>Seasoned rice paired with fresh fillings, vegetables, and seaweed.</p>
+              </div>
+              <footer>
+                <strong>$8</strong>
+                <button type="button" data-add="Sushi" data-price="8">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="asian">
+              <div>
+                <p class="menu-kicker">Dumplings</p>
+                <h3>Flavor Pockets</h3>
+                <p>Small dough pockets wrapped around savory meat or vegetables, steamed or pan-fried.</p>
+              </div>
+              <footer>
+                <strong>$8</strong>
+                <button type="button" data-add="Flavor Pockets" data-price="8">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="desserts">
+              <div>
+                <p class="menu-kicker">British dessert</p>
+                <h3>Treacle Pie</h3>
+                <p>A flaky crust filled with a gooey syrup-and-breadcrumb center.</p>
+              </div>
+              <footer>
+                <strong>$7</strong>
+                <button type="button" data-add="Treacle Pie" data-price="7">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="desserts">
+              <div>
+                <p class="menu-kicker">British dessert</p>
+                <h3>Bread and Butter Pudding</h3>
+                <p>Buttered bread and raisins baked with milk, sugar, and eggs until soft and crisp.</p>
+              </div>
+              <footer>
+                <strong>$7</strong>
+                <button type="button" data-add="Bread and Butter Pudding" data-price="7">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="desserts">
+              <div>
+                <p class="menu-kicker">Southeast Asian dessert</p>
+                <h3>Mango Sticky Rice</h3>
+                <p>Warm glutinous rice with salted coconut milk and fresh mango slices.</p>
+              </div>
+              <footer>
+                <strong>$7</strong>
+                <button type="button" data-add="Mango Sticky Rice" data-price="7">Add</button>
+              </footer>
+            </article>
+
+            <article class="menu-card" data-category="desserts">
+              <div>
+                <p class="menu-kicker">Filipino dessert</p>
+                <h3>Halo-Halo</h3>
+                <p>Shaved ice, sweet milk, ice cream, fruit, and colorful toppings mixed together.</p>
+              </div>
+              <footer>
+                <strong>$7</strong>
+                <button type="button" data-add="Halo-Halo" data-price="7">Add</button>
+              </footer>
+            </article>
+          </div>
+
+          <aside class="order-card" id="order" aria-labelledby="order-title">
+            <p class="eyebrow">Online order</p>
+            <h2 id="order-title">Launch your order</h2>
+            <p class="order-help">Add menu items, choose pickup or delivery, then send an order request.</p>
+            <div class="order-empty" data-order-empty>Add menu items to begin.</div>
+            <ul class="order-list" data-order-list></ul>
+            <div class="order-total">
+              <span>Total</span>
+              <strong data-order-total>$0.00</strong>
+            </div>
+
+            <form class="order-form" data-order-form>
+              <fieldset>
+                <legend>How would you like it?</legend>
+                <label>
+                  <input type="radio" name="fulfillment" value="Pickup" checked>
+                  Pickup
+                </label>
+                <label>
+                  <input type="radio" name="fulfillment" value="Delivery">
+                  Delivery
+                </label>
+              </fieldset>
+              <label>
+                Name
+                <input name="orderName" autocomplete="name" required>
+              </label>
+              <label>
+                Phone
+                <input name="orderPhone" type="tel" autocomplete="tel" required>
+              </label>
+              <label>
+                Ready time
+                <select name="readyTime" required>
+                  <option value="">Select</option>
+                  <option>As soon as possible</option>
+                  <option>30 minutes</option>
+                  <option>45 minutes</option>
+                  <option>1 hour</option>
+                </select>
+              </label>
+              <button class="button button-primary button-full" type="submit">Send Order Request</button>
+            </form>
+
+            <button class="button button-secondary button-full" type="button" data-clear-order>Clear Order</button>
+            <p class="order-note" data-order-note role="status" aria-live="polite"></p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="reservation section-pad" id="reserve" aria-labelledby="reserve-title">
+        <div class="reservation-copy">
+          <p class="eyebrow">Reservations</p>
+          <h2 id="reserve-title">Book a window seat near the stars.</h2>
+          <p>
+            Save a table for dinner, dessert, or a post-park drink flight at Nova Novelties.
+          </p>
+        </div>
+
+        <form class="reserve-form" data-reserve-form>
+          <label>
+            Name
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Party size
+            <select name="party" required>
+              <option value="">Select</option>
+              <option>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5 guests</option>
+              <option>6 guests</option>
+            </select>
+          </label>
+          <label>
+            Date
+            <input type="date" name="date" required>
+          </label>
+          <label>
+            Time
+            <select name="time" required>
+              <option value="">Select</option>
+              <option>11:30 AM</option>
+              <option>1:00 PM</option>
+              <option>5:30 PM</option>
+              <option>7:00 PM</option>
+              <option>8:30 PM</option>
+            </select>
+          </label>
+          <button class="button button-primary button-full" type="submit">Request Reservation</button>
+          <p class="form-note" data-form-note role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="visit section-pad" id="visit" aria-labelledby="visit-title">
+        <div class="section-heading">
+          <p class="eyebrow">Visit</p>
+          <h2 id="visit-title">Find us in Orlando.</h2>
+        </div>
+        <div class="visit-grid">
+          <article>
+            <h3>Address</h3>
+            <p>6000 Universal Blvd<br>Orlando, FL 32819</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=6000%20Universal%20Blvd%2C%20Orlando%2C%20FL%2032819" target="_blank" rel="noreferrer">Open map</a>
+          </article>
+          <article>
+            <h3>Hours</h3>
+            <p>Sunday - Thursday: 11 AM - 10 PM<br>Friday - Saturday: 11 AM - 11 PM</p>
+          </article>
+          <article>
+            <h3>Contact</h3>
+            <p>Owner: Kyra Mitra<br><a href="tel:+19549876543">(954) 987-6543</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Nova Novelties by Kyra Mitra</p>
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
